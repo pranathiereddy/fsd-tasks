@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>13</title>
+        <style>
+            body{
+                margin: 0;
+                min-height: 100vh;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                background: #f5f7fb;
+                color: #111827;
+            }
+            h1{
+                margin:10px;
+            }
+            button{
+                margin: 10px;
+                font-size:20;
+                font-weight: 700;
+                cursor: pointer;
+                transition:0.2s;
+            }
+            button:hover{
+                cursor:pointer;
+                background-color:rgb(73, 228, 119);
+            }
+            label{
+                display: block;                      
+                text-align: left;                    
+                font-weight: 600;                    
+                margin:15px 0 8px;                    
+                color: #111827;                    
+            }
+            form{
+                width: 100%;
+                margin: 0 auto;
+                padding: 20px;
+                background: #ffffff;
+                border: 1px solid #e5e7eb;
+                border-radius: 12px;
+
+                opacity: 0;
+                transform: translateY(20px);
+                animation: formFadeIn 5s ease forwards;
+            }
+            input {
+                width: 100%;
+                padding: 10px 12px;
+                border: 1px solid #e5e7eb;
+                border-radius: 10px;
+                font-size: 14px;
+                margin-top: 6px;
+            }
+
+            @keyframes formFadeIn{
+                to{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @media (max-width: 768px) {
+                h1{ font-size: 22px; }
+                button{ font-size: 18px; }
+                form{ padding: 16px; border-radius: 10px; }
+            }
+
+            @media (max-width: 360px) {
+                h1{ font-size: 20px; }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Login Form</h1>
+        <form>
+            <label>
+                Username:<input type="text" name="username" placeholder="enter username" required/>
+            </label><br>
+            <label>
+                Password:<input type="password" name="password" placeholder="enter password" required/>
+            </label><br>
+            <button type="submit">Login</button>      
+        </form>
+    </body>
+</html>

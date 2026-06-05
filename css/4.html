@@ -1,0 +1,78 @@
+<html>
+<head>
+  <title>4</title>
+  <style>
+
+    body{ 
+        font-family:Arial, sans-serif; 
+        background:#f2f2f2; 
+    }
+
+    header{ 
+        background:#2196f3; 
+        color:#fff; padding:14px; 
+        font-weight:bold; 
+    }
+
+    .layout{ 
+        display:flex; 
+       }
+
+    aside{
+      width:220px;
+      background:#333;
+      color:#fff;
+      padding:15px;
+    }
+
+    aside a{
+      display:block;
+      color:#ddd;
+      padding:8px 0;
+    }
+
+    main{ 
+        flex:1; 
+        padding:15px; 
+    }
+
+    .box{ 
+        background:#fff; 
+        padding:15px; 
+        margin-bottom:12px; 
+        border:1px solid #e0e0e0; 
+    }
+
+    @media (max-width:768px){
+      aside{ display:none; }
+      .layout{ display:block; }
+    }
+  </style>
+</head>
+<body>
+  <header>Student Management Dashboard</header>
+
+  <div class="layout">
+    <aside>
+      <h3 style="margin-bottom:10px;">Menu</h3>
+      <a href="#">Dashboard</a>
+      <a href="#">Students</a>
+      <a href="#">Courses</a>
+      <a href="#">Attendance</a>
+      <a href="#">Reports</a>
+    </aside>
+
+    <main>
+      <div class="box">
+        <h2 style="margin-bottom:8px;">Dashboard</h2>
+        <p>Total Students: 60</p>
+      </div>
+
+      <div class="box">
+        <h2 style="margin-bottom:8px;">Main Content</h2>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
