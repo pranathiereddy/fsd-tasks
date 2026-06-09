@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .gallery-img{
+            height:250px;
+            object-fit:cover;
+        }
+
+
+        footer{
+            background-color:#6c757d;
+            color:white;
+            padding:20px 0;
+            text-align:center;
+            margin-top:auto;
+        }
+
+        footer a{
+            color:white;
+            text-decoration:none;
+            margin:0 10px;
+        }
+
+        footer a:hover{
+            text-decoration:underline;
+        }
+
+        @media (max-width:576px){
+            .gallery-img{
+                height:200px;
+            }
+
+            h2{
+                font-size:1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://cvr.ac.in/it/it_cvr_logo1.jpg"
+                     alt="Logo"
+                     width="50"
+                     height="50">
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Gallery</h2>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src=""
+                         class="card-img-top gallery-img"
+                         alt="Cultural Fest">
+                    <div class="card-body">
+                        <h5 class="card-title">Cultural Fest</h5>
+                        <p class="card-text text-muted">
+                            Performances & celebrations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src=""
+                         class="card-img-top gallery-img"
+                         alt="Technical Quiz">
+                    <div class="card-body">
+                        <h5 class="card-title">Technical Quiz</h5>
+                        <p class="card-text text-muted">
+                            Knowledge rounds & winners.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src=""
+                         class="card-img-top gallery-img"
+                         alt="Hackathon">
+                    <div class="card-body">
+                        <h5 class="card-title">Hackathon</h5>
+                        <p class="card-text text-muted">
+                            Build, test, and demo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src=""
+                         class="card-img-top gallery-img"
+                         alt="Poster Presentation">
+                    <div class="card-body">
+                        <h5 class="card-title">Poster Presentation</h5>
+                        <p class="card-text text-muted">
+                            Ideas and research highlights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src=""
+                         class="card-img-top gallery-img"
+                         alt="Project Expo">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Expo</h5>
+                        <p class="card-text text-muted">
+                            Live demos & innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src=""
+                         class="card-img-top gallery-img"
+                         alt="Coding Contest">
+                    <div class="card-body">
+                        <h5 class="card-title">Coding Contest</h5>
+                        <p class="card-text text-muted">
+                            Algorithms and problem solving.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="mb-2">
+                &copy; Event Management System. All Rights Reserved
+            </p>
+
+            <div>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
