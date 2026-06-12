@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            h1{
+                padding: 0 0 20px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Weather App</h2>
+        <form id="weatherForm">
+            <input type="text" id="city" placeholder="Enter city" required><br><br>
+            <button type="submit">Get Weather</button>
+        </form>
+
+        <p id="temp"></p>
+        <h3 id="forecastHeading" style="display:none;">Forecast</h3>
+        <div id="forecast"></div>
+
+        <script>
+            document.getElementById("weatherForm").addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const city = document.getElementById("city").value;
+                const tempEl = document.getElementById("temp");
+                const forecastEl = document.getElementById("forecast");
+                const API_KEY='98454fba74f66f7dcc193963ce4d5deb';
+                try 
+                {
+                    const res = await fetch(
+                        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric`
+                    );
+                    const data = await res.json();
+                    const forecastHeading = document.getElementById("forecastHeading");
+                    tempEl.textContent = `Current Temperature: ${data.list[0].main.temp} °C`;
+                    forecastHeading.style.display = "block";
+                    let output = "";
+                    for (let i = 0; i < data.list.length; i += 8) { 
+                        output += `
+                            <p>
+                                ${data.list[i].dt_txt.split(" ")[0]} :
+                                ${data.list[i].main.temp} °C
+                            </p>
+                        `;
+                    }
+                    forecastEl.innerHTML = output;
+                } 
+                catch 
+                {
+                    tempEl.textContent = "";
+                    forecastHeading.style.display = "none";
+                    forecastEl.textContent = "Unable to fetch weather data, check api key";
+
+                }
+            });
+        </script>
+    </body>
+</html>
+
