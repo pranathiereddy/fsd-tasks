@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body{
+        text-align: center;
+      }
+      h1{
+        padding: 0 0 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Register</h1>
+
+    <label>
+      Username:
+      <input type="text" id="username" required />
+    </label>
+
+    <br /> <br />
+
+    <label>
+      Password:
+      <input type="password" id="password" required />
+    </label>
+
+    <br /> <br />
+
+    <button type="submit" onclick="registerUser()">Register</button>
+
+    <p>Already an user? <a href="login.html">login here</a></p>
+
+    <script>
+      function registerUser() {
+        let uname = document.getElementById('username').value;
+        let pwd = document.getElementById('password').value;
+
+        if (!uname || !pwd) return;
+
+        fetch('http://localhost:3000/users', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: uname, password: pwd })
+        })
+          .then(function (res) {
+            if (res.ok) {
+              window.location.href = 'login.html';
+            } else {
+              alert('Registration failed');
+            }
+          })
+          .catch(function () {
+            alert('Registration failed');
+          });
+      }
+    </script>
+  </body>
+</html>
+
